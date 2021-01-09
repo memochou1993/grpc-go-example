@@ -24,9 +24,9 @@ func main() {
 		log.Fatalln(err.Error())
 	}
 
-	gRPCServer := grpc.NewServer()
-	pb.RegisterHelloServiceServer(gRPCServer, &service{})
-	if err := gRPCServer.Serve(ln); err != nil {
+	s := grpc.NewServer()
+	pb.RegisterHelloServiceServer(s, &service{})
+	if err := s.Serve(ln); err != nil {
 		log.Fatalln(err.Error())
 	}
 }
