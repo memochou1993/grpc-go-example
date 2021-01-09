@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 	pb "github.com/memochou1993/grpc-go-example"
 	"google.golang.org/grpc"
 	"log"
@@ -25,5 +24,5 @@ func main() {
 	if err != nil {
 		log.Fatalln(err.Error())
 	}
-	fmt.Println(fmt.Sprintf("Response received: %s", r.GetReply()))
+	log.Printf("Response received: %s", r.GetReply())
 }
