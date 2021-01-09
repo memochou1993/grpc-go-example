@@ -12,7 +12,7 @@ func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 
-	addr := "127.0.0.1:9999"
+	addr := "127.0.0.1:8080"
 	conn, err := grpc.DialContext(ctx, addr, grpc.WithInsecure(), grpc.WithBlock())
 	if err != nil {
 		log.Fatalln(err.Error())

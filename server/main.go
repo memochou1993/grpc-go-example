@@ -18,7 +18,7 @@ func (s *service) SayHello(ctx context.Context, r *pb.HelloRequest) (*pb.HelloRe
 }
 
 func main() {
-	addr := "127.0.0.1:9999"
+	addr := "127.0.0.1:8080"
 	ln, err := net.Listen("tcp", addr)
 	if err != nil {
 		log.Fatalln(err.Error())
